@@ -13,6 +13,7 @@ let word = ["מפקד", "סגן", `רמ"ס`, `ק. אג"ם`, `ק. מודיעין`
 let translate = ["קודקוד", "משנה", "סיפון", "אולר", "פרפר", `כספית`, `מברג`, `אבוס`, `שעון`, `קלף`];
 
 window.addEventListener("load", (event) => {
+    console.log("play game");
     document.getElementById("startGame").addEventListener("click", startGame); 
     document.getElementById("return").addEventListener("click", ret);
 });
