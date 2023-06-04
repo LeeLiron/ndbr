@@ -52,7 +52,7 @@
 }
   
 .card__face--back {
-    background: #2d8e894f;
+    background: black;
     transform: rotateY(180deg);
 }
  
