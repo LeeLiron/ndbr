@@ -1,0 +1,102 @@
+@font-face {
+    font-family: mainFont;
+    src: url(assets/fonts/YardenAlefAlefAlef/otf/yarden-bold-alefalefalef.otf);
+}
+
+#body {
+    background-color: #efe7da;
+    font-family: mainFont;
+    height: 100vh;
+    width: 100vw;
+}
+
+.icon {
+    height: 8vh;
+}
+
+.icon1 {
+    position: absolute;
+    top: 8%;
+    right: 40%;
+}
+
+.icon2 {
+    position: absolute;
+    top: 23%;
+    right: 60%;
+}
+
+.icon3 {
+    position: absolute;
+    top: 38%;
+    right: 48%;
+    filter: grayscale(1);
+}
+
+.icon4 {
+    position: absolute;
+    top: 53%;
+    right: 28%;
+}
+
+.icon5 {
+    position: absolute;
+    top: 68%;
+    right: 48%;
+}
+
+.anim1 {
+    height: 14vh;
+    position: absolute;
+    right: 9%;
+    top: 20%;
+}
+
+.anim2 {
+    height: 12vh;
+    position: absolute;
+    left: 9%;
+    top: 50%;
+}
+
+.anim3 {
+    height: 9vh;
+    position: absolute;
+    right: 18%;
+    top: 77%;
+}
+
+.play {
+    height: 12vh;
+    visibility: hidden;
+}
+
+.play1 {
+    position: absolute;
+    top: 13%;
+    right: 49%;
+}
+
+.play2 {
+    position: absolute;
+    top: 29%;
+    right: 60%;
+}
+
+.play3 {
+    position: absolute;
+    top: 43%;
+    right: 30%;
+}
+
+.play4 {
+    position: absolute;
+    top: 58.5%;
+    right: 14%;
+}
+
+.play5 {
+    position: absolute;
+    top: 73.5%;
+    right: 51%;
+}

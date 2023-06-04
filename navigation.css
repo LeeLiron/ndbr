@@ -1,0 +1,14 @@
+.navigationBar {
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    right: -1%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #2d8e894f;
+}
+
+.NavImg {
+    height: 10vh;
+}

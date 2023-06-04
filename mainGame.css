@@ -1,0 +1,53 @@
+@font-face {
+    font-family: mainFont;
+    src: url(assets/fonts/YardenAlefAlefAlef/otf/yarden-bold-alefalefalef.otf);
+}
+
+#body {
+    background-color: #efe7da;
+    font-family: mainFont;
+    height: 100vh;
+    width: 100vw;
+}
+
+.mainTitle {
+    font-size: 8vh;
+    color: #2d8e89;
+    position: absolute;
+    top: 12%;
+    right: 9%;
+}
+
+
+.box {
+    color: #2d8e89;
+    border: 3px #2d8e89 solid;
+    display: inline-block;
+    height: 15vh;
+    width: 30vw;
+    border-radius: 30px;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.gameBox1 {
+    position: absolute;
+    right: 12%;
+    top: 30%;
+}
+
+.gameBox2 {
+    position: absolute;
+    left: 12%;
+    top: 30%;
+    color: grey;
+    border-color: grey;
+}
+
+.gameBox3 {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    color: grey;
+    border-color: grey;
+}

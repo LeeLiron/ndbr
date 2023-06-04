@@ -1,0 +1,177 @@
+@font-face {
+    font-family: mainFont;
+    src: url(assets/fonts/YardenAlefAlefAlef/otf/yarden-bold-alefalefalef.otf);
+}
+
+#body {
+    background-color: #efe7da;
+    font-family: mainFont;
+    height: 100vh;
+    width: 100vw;
+}
+.timer{
+    visibility: hidden;
+    position: absolute;
+    left: 31%;
+    top: 10%;
+    width: 39vw;
+    height: 7vh;
+    border: 7px #2d8e89 solid;
+    text-align: center;
+    font-size: 3vh;
+}
+
+.wordsCollumn {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    left: 15%;
+    top: 23%;
+    width: 28vw;
+    height: 60vh;
+}
+
+.transCollumn {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    right: 15%;
+    top: 23%;
+    width: 28vw;
+    height: 60vh;
+}
+
+.cube {
+    height: 8vh;
+    width: 28vw;
+    border: 7px #2d8e89 solid;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 3.5vh;
+}
+
+.touched {
+    background-color: rgb(227, 223, 223);
+}
+
+.right {
+    border: 7px #39ed75 solid;
+}
+
+.wrong {
+    border: 7px #d8453b solid;
+}
+
+
+.winGif {
+    position: absolute;
+    right: 10%;
+    top: 35%;
+    height: 20vh;
+    width: 80vw;
+}
+
+.winTitle {
+    font-size: 8vh;
+    position: absolute;
+    right: 10%;
+    top: 11%;
+}
+
+.winSubTitle {
+    font-size: 3vh;
+    position: absolute;
+    right: 14%;
+    top: 24%;
+}
+
+.winSubTitle2 {
+    font-size: 3vh;
+    position: absolute;
+    right: 34%;
+    top: 60%;
+}
+
+
+.playAgain {
+    display: inline-block;
+    border: 1px black solid;
+    border-radius: 30px;
+    height: 6vh;
+    width: 20vw;
+    position: absolute;
+    right: 10%;
+    bottom: 27%;
+    text-align: center;
+    font-size: 3vh;
+}
+
+.exit{
+    display: inline-block;
+    border: 1px black solid;
+    border-radius: 30px;
+    height: 6vh;
+    width: 20vw;
+    position: absolute;
+    left: 16%;
+    bottom: 27%;
+    text-align: center;
+    font-size: 2.8vh;
+}
+
+.winDiv {
+    visibility: hidden;
+}
+
+.loseDiv {
+    visibility: hidden;
+}
+
+.replay {
+    visibility: hidden;
+}
+
+.openTitle {
+    font-size: 5vh;
+    direction: rtl;
+    text-align: center;
+    position: absolute;
+    top: 7%;
+}
+
+.openP {
+    direction: rtl;
+    font-size: 3vh;
+    position: absolute;
+    top: 25%;
+    right: 2%;
+}
+
+.openGif {
+    height: 20vh;
+    width: 75vw;
+    position: absolute;
+    top: 50%;
+    left: 12.5%;
+}
+
+.startGame {
+    display: inline-block;
+    border: 6px black solid;
+    border-radius: 30px;
+    height: 6vh;
+    width: 28vw;
+    position: absolute;
+    right: 35%;
+    bottom: 18%;
+    text-align: center;
+    font-size: 3vh;
+}
+
+.return {
+    height: 5vh;
+}

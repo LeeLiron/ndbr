@@ -1,0 +1,65 @@
+@font-face {
+    font-family: mainFont;
+    src: url(assets/fonts/YardenAlefAlefAlef/otf/yarden-bold-alefalefalef.otf);
+}
+
+#body {
+    background-color: #efe7da;
+    font-family: mainFont;
+    height: 100vh;
+    width: 100vw;
+}
+
+.scene {
+    /* display: inline-block; */
+    height: 10vh;
+    width: 20vw;
+  /*   border: 1px solid #CCC; */
+    margin: 40px 0;
+    perspective: 600px;
+}
+  
+.card {
+    position: relative;
+    height: 10vh;
+    width: 20vw;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+}
+  
+.card.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+  
+.card__face {
+    position: absolute;
+    height: 10vh;
+    width: 20vw;
+    line-height: 10vh;
+    color: black;
+    text-align: center;
+    font-size: 4vh;
+    backface-visibility: hidden;
+    border: 3px #2d8e89 solid;
+    border-radius: 30px;
+}
+  
+.card__face--front {
+    background: #2d8e894f;
+}
+  
+.card__face--back {
+    background: #2d8e894f;
+    transform: rotateY(180deg);
+}
+ 
+.wordsDiv {
+    width: 98vw;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
