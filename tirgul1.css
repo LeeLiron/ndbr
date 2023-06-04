@@ -83,10 +83,10 @@
 
 .checkAns1 {
     display: inline-block;
-    border: 6px rgb(0, 0, 0) solid;
+    border: 6px black solid;
     border-radius: 30px;
     position: absolute;
-    bottom: -3%;
+    bottom: 2%;
     left: 34%;
     font-size: 4vh;
     height: 5vh;
