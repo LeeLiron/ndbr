@@ -21,8 +21,8 @@
 }
   
 .card {
-    position: relative;
-    height: 8vh;
+    position: absolute;
+    height: 4vh;
     width: 20vw;
     cursor: pointer;
     transform-style: preserve-3d;
@@ -35,10 +35,11 @@
 }
   
 .card__face {
+    margin: 0%;
     position: absolute;
-    height: 10vh;
+    height: 7vh;
     width: 20vw;
-    line-height: 10vh;
+    /* line-height: 4vh; */
     color: black;
     text-align: center;
     font-size: 4vh;
@@ -52,15 +53,23 @@
 }
   
 .card__face--back {
-    background: black;
+    background: #2d8e894f;
     transform: rotateY(180deg);
 }
  
 .wordsDiv {
+    /* border: 3px black solid; */
     width: 98vw;
-    height: 70vh;
+    height: 78vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: row-reverse;
+    position: absolute;
+    top: -2%;
+}
+
+.full {
+    /* height: 100%; */
+    overflow: hidden;
 }

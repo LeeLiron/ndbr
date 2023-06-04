@@ -1,9 +1,9 @@
 .navigationBar {
     height: 10vh;
-    width: 100%;
+    width: 102vw;
     position: absolute;
-    bottom: 0%;
-    right: -1%;
+    bottom: -1%;
+    left: -1%;
     display: flex;
     justify-content: space-around;
     background-color: #2d8e894f;
