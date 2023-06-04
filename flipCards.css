@@ -22,7 +22,7 @@
   
 .card {
     position: relative;
-    height: 10vh;
+    height: 8vh;
     width: 20vw;
     cursor: pointer;
     transform-style: preserve-3d;
