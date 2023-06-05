@@ -2,9 +2,7 @@ var scorm = pipwerks.scorm;
 var lmsConnected = false;
 
 window.addEventListener("load", (event) => {
-    for (let i = 1; i < 6; i++){
-        document.getElementById(`icon${i}`).addEventListener("click", openPlay);
-    }
+    document.getElementById(`icon1`).addEventListener("click", openPlay);
 });
 
 const openPlay = (event) => {
