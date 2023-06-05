@@ -1,7 +1,9 @@
 let ans;
 let checked = false;
 let currQuest = 1;
-let score = 0;
+let score = 100;
+let d = 0;
+let r = 0;
 
 window.addEventListener("load", (event) => {
     for (let i = 1; i < 5; i++) {
@@ -37,18 +39,24 @@ const check= (event) => {
             if (ans != 1){
                 console.log("lll");
                 document.getElementById(`answer${ans}`).classList.add("false");
-            }
+                score = score - 25;
+            } 
             document.getElementById("answer1").classList.add("true");
             document.getElementById("checkAns1").addEventListener("click", quest2);
+            document.getElementById("img1").setAttribute("src", "assets/icons/full-stop.png");
+            document.getElementById("img2").setAttribute("src", "assets/icons/soldier.png");
         }
 
         if (currQuest == 2){
             console.log("here");
             if (ans != 4){
                 document.getElementById(`answer${ans}`).classList.add("false");
+                score = score - 25;
             }
             document.getElementById("answer4").classList.add("true");
             document.getElementById("checkAns1").addEventListener("click", quest3);
+            document.getElementById("img2").setAttribute("src", "assets/icons/full-stop.png");
+            document.getElementById("img3").setAttribute("src", "assets/icons/soldier.png");
         }
     }
 
@@ -121,6 +129,10 @@ const pressed = (event) => {
     if (counter == 3){
         document.getElementById("checkAns1").addEventListener("click", quest4);
         document.getElementById("checkAns1").classList.remove("disabled");
+        setTimeout(() => { //waits until removes marks
+            document.getElementById("img3").setAttribute("src", "assets/icons/full-stop.png");
+            document.getElementById("img4").setAttribute("src", "assets/icons/soldier.png");
+        }, 900);
     }
 }
 
@@ -151,6 +163,10 @@ const check4 = (event) => {
         if (document.getElementById("ansT4").innerText == "תורן" ){
             document.getElementById("ansT4").style.color = "green";
         } else {
+            if (d < 1){
+                score = score - 25;
+            }
+            d++;
             document.getElementById("ansT4").style.color = "red";
             document.getElementById("t4word2").style.color = "green";
         }
@@ -161,6 +177,8 @@ const check4 = (event) => {
 
     document.getElementById("checkAns1").innerText = "הבא";
     document.getElementById(`checkAns1`).addEventListener("click", change2T4);
+    document.getElementById("img4").setAttribute("src", "assets/icons/full-stop.png");
+    document.getElementById("img5").setAttribute("src", "assets/icons/soldier.png");
 
 }
 
@@ -177,7 +195,7 @@ const change2T4 = (event) => {
 const check42 = (event) => {
     document.getElementById("checkAns1").innerText = "הבא";
     for (let i =1; i < 7; i++){
-        document.getElementById(`t42word${i}`).removeEventListener("click", changeT4);
+        document.getElementById(`t42word${i}`).removeEventListener("click", changeT42);
     }
     if (document.getElementById("ansT42").innerText != null){
         if (document.getElementById("ansT42").innerText == "שעון" ){
@@ -185,6 +203,10 @@ const check42 = (event) => {
         } else {
             document.getElementById("ansT42").style.color = "red";
             document.getElementById("t42word2").style.color = "green";
+            if (r < 1){
+                score = score - 25;
+            }
+            r++;
         }
     } else {
         document.getElementById("ansT42").innerText = "שעון";
@@ -192,4 +214,7 @@ const check42 = (event) => {
     }
 
     document.getElementById("checkAns1").innerText = "הבא";
+    document.getElementById("img5").setAttribute("src", "assets/icons/full-stop.png");
+    document.getElementById("img6").setAttribute("src", "assets/icons/soldier.png");
+    alert(score);
 }

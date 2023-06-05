@@ -12,10 +12,17 @@
     user-select: none;
 }
 
+.quest1 {
+  position: absolute;
+  top: 12%;
+}
+
 .progressBar {
-    border: 1px black solid;
+    /* border: 1px black solid; */
     height: 10vh;
     width: 100vw;
+    position: absolute;
+    top: 3%;
 }
 
 .tirgul1Title{
@@ -292,4 +299,9 @@
 
   .anst42 {
     left: 64%;
+  }
+
+  .progImg {
+    height: 8vh;
+    width: 13.9vw;
   }
