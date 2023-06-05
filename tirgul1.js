@@ -33,11 +33,11 @@ const check= (event) => {
         console.log("hola");
         console.log(currQuest);
         if (currQuest == 1){
-            if (ans != 2){
+            if (ans != 1){
                 console.log("lll");
                 document.getElementById(`answer${ans}`).classList.add("false");
             }
-            document.getElementById("answer2").classList.add("true");
+            document.getElementById("answer1").classList.add("true");
             document.getElementById("checkAns1").addEventListener("click", quest2);
         }
 
@@ -102,9 +102,9 @@ const quest3 = (event) => {
     document.getElementById("checkAns1").classList.add("disabled");
     for (let i = 1; i < 4; i++){
         console.log(`card${i}`);
+        document.getElementById(`card${i}`).addEventListener("click", pressed);
         document.getElementById(`card${i}`).addEventListener( 'click', function() {
             document.getElementById(`card${i}`).classList.toggle('is-flipped');
-            document.getElementById(`card${i}`).addEventListener("click", pressed);
         });
     }
 }
