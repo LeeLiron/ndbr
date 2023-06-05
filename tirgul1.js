@@ -1,6 +1,7 @@
 let ans;
 let checked = false;
 let currQuest = 1;
+let score = 0;
 
 window.addEventListener("load", (event) => {
     for (let i = 1; i < 5; i++) {
@@ -81,7 +82,7 @@ const quest2 = () => {
     document.getElementById("checkAns1").innerText = "בדוק";
     document.getElementById("checkAns1").removeEventListener("click", quest2);
     document.getElementById("checkAns1").addEventListener("click", check);
-    document.getElementById("tirgul1Word").innerText = "ק. חיר";
+    document.getElementById("tirgul1Word").innerText = `קץ חי"ר`;
     document.getElementById("ans1Title1").innerText = "מנעול";
     document.getElementById("ans1Title2").innerText = "תלתן";
     document.getElementById("ans1Title3").innerText = "צמיד";
