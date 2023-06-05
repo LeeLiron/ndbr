@@ -214,7 +214,12 @@ const check42 = (event) => {
     }
 
     document.getElementById("checkAns1").innerText = "הבא";
+    document.getElementById("checkAns1").addEventListener("click", finishLes);
     document.getElementById("img5").setAttribute("src", "assets/icons/full-stop.png");
     document.getElementById("img6").setAttribute("src", "assets/icons/soldier.png");
-    alert(score);
+    sessionStorage.setItem("score", score);
+}
+
+const finishLes = (event) => {
+    window.location.replace("finishLesson.html");
 }
