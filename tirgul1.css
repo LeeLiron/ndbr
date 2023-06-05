@@ -9,6 +9,7 @@
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    user-select: none;
 }
 
 .progressBar {
@@ -20,12 +21,14 @@
 .tirgul1Title{
     font-size: 3vh;
     direction: rtl;
+    user-select: none;
 }
 
 .tirgul1Word {
     font-size: 6vh;
     text-align: center;
     color: #2d8e89;
+    user-select: none;
 }
 
 .answers {
@@ -36,6 +39,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    user-select: none;
 }
 
 .answer {
@@ -43,6 +47,7 @@
     border-radius: 30px;
     width: 42vw;
     height: 16vh;
+    user-select: none;
     /* background-color: rgba(69, 182, 101, 0.422); */
     
 }
@@ -51,6 +56,7 @@
     text-align: center;
     font-size: 3vh;
     color: #2d8e89;
+    user-select: none;
 }
 
 .ans1Img1 {
@@ -93,6 +99,7 @@
     width: 30vw;
     text-align: center;
     color: #2d8e89;
+    user-select: none;
 }
 
 .touched {
@@ -106,3 +113,183 @@
 .false {
     background-color: rgba(255, 0, 0, 0.525);
 }
+
+.scene {
+    display: inline-block;
+    height: 10vh;
+    width: 15vw;
+  /*   border: 1px solid #CCC; */
+    margin: 40px 0;
+    perspective: 500px;
+  }
+  
+  .card {
+    position: absolute;
+    height: 23vh;
+    width: 42vw;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+    user-select: none;
+  }
+  
+  .card.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+  
+  .card__face {
+    margin: 0%;
+    position: absolute;
+    height: 23vh;
+    width: 42vw;
+    line-height: 21vh;
+    color: black;
+    text-align: center;
+    font-size: 6vh;
+    backface-visibility: hidden;
+    border: 3px #2d8e89 solid;
+    border-radius: 30px;
+    user-select: none;
+  }
+  
+  .card__face--front {
+    background: #2d8e894f;
+  }
+  
+  .card__face--back {
+    background: #2d8e894f;
+    transform: rotateY(180deg);
+  }
+  
+  .wordsDiv {
+    /* border: 3px black solid; */
+    width: 98vw;
+    height: 78vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    position: absolute;
+    top: -2%;
+  }
+  
+  .full {
+    /* height: 100%; */
+    overflow: hidden;
+    user-select: none;
+  }
+  
+  .tirgul2Title {
+    font-size: 3vh;
+    direction: rtl;
+    top: -20%;
+    user-select: none;
+  }
+  
+  #card1 {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    user-select: none;
+  }
+  
+  #card2 {
+    position: absolute;
+    top: 30%;
+    left: 260%;
+    user-select: none;
+  }
+
+  #card3 {
+    position: absolute;
+    top: 300%;
+    left:-20%;
+    user-select: none;
+  }
+
+  #quest2 {
+    visibility: hidden;
+    position: absolute;
+    top: 10%;
+    user-select: none;
+  }
+
+  .cardTouch {
+    color: grey;
+  }
+
+  .disabled {
+    color: grey;
+  }
+
+  .tirgul3S {
+    font-size: 3.5vh;
+    direction: rtl;
+    text-align: center;
+    color: #2d8e89;
+    margin-top: 20%;
+    user-select: none;
+  }
+
+  .tirgul3A {
+    font-size: 3.5vh;
+    text-align: center;
+    color: black;
+    margin-top: 13%;
+    user-select: none;
+  }
+
+  .tirgul4WordDiv {
+    height: 20vh;
+    width: 90vw;
+    position: absolute;
+    top: 128%;
+    right: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+  }
+
+  .t4word {
+    border: 3px black solid;
+    border-radius: 30px;
+    display: inline-block;
+    height: 8vh;
+    width: 23vw;
+    font-size: 3vh;
+    text-align: center;
+    line-height: 7vh;
+    user-select: none;
+    /* color: #2d8e89; */
+  }
+
+  .ansT4 {
+    display: inline-block;
+    /* border: 1px black solid; */
+    height: 3vh;
+    width: 19vw;
+    position: absolute;
+    top: 78.6%;
+    left: 12%;
+    direction: rtl;
+    font-size: 3.3vh;
+    color: #2d8e89;
+  }
+
+  .quest3 {
+    visibility: hidden;
+    position: absolute;
+    top: 10%;
+  }
+
+  .quest4 {
+    visibility: hidden;
+    position: absolute;
+    top: 10%;
+  }
+
+  .anst42 {
+    left: 65%;
+  }

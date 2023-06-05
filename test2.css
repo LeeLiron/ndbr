@@ -6,8 +6,8 @@
 #body {
     background-color: #efe7da;
     font-family: mainFont;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -17,52 +17,81 @@
     width: 100vw;
 }
 
-.tirgul1Title{
-    font-size: 3vh;
-    direction: rtl;
+.scene {
+  /* display: inline-block; */
+  height: 10vh;
+  width: 20vw;
+/*   border: 1px solid #CCC; */
+  margin: 40px 0;
+  perspective: 600px;
 }
 
-.scene {
-    display: inline-block;
-    width: 200px;
-    height: 260px;
-  /*   border: 1px solid #CCC; */
-    margin: 40px 0;
-    perspective: 600px;
-  }
-  
-  .card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    transform-style: preserve-3d;
-    transform-origin: center right;
-    transition: transform 1s;
-  }
-  
-  .card.is-flipped {
-    transform: translateX(-100%) rotateY(-180deg);
-  }
-  
-  .card__face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    line-height: 260px;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
-    backface-visibility: hidden;
-  }
-  
-  .card__face--front {
-    background: crimson;
-  }
-  
-  .card__face--back {
-    background: slateblue;
-    transform: rotateY(180deg);
-  }
-  
+.card {
+  position: absolute;
+  height: 4vh;
+  width: 20vw;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  margin: 0%;
+  position: absolute;
+  height: 23vh;
+  width: 42vw;
+  line-height: 21vh;
+  color: black;
+  text-align: center;
+  font-size: 6vh;
+  backface-visibility: hidden;
+  border: 3px #2d8e89 solid;
+  border-radius: 30px;
+
+}
+
+.card__face--front {
+  background: #2d8e894f;
+}
+
+.card__face--back {
+  background: #2d8e894f;
+  transform: rotateY(180deg);
+}
+
+.wordsDiv {
+  /* border: 3px black solid; */
+  width: 98vw;
+  height: 78vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  position: absolute;
+  top: -2%;
+}
+
+.full {
+  /* height: 100%; */
+  overflow: hidden;
+}
+
+.tirgul1Title {
+  font-size: 2.5vh;
+  direction: rtl;
+}
+
+#card1 {
+  position: absolute;
+  top: 190%;
+}
+
+#card2 {
+  position: absolute;
+  right: -270%;
+}

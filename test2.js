@@ -1,8 +1,11 @@
 window.addEventListener("load", (event) => {
     console.log("hello");
-    document.getElementById(`card1`).addEventListener( 'click', function() {
-        document.getElementById(`card$1`).classList.toggle('is-flipped');
-    });
+    for (let i = 1; i < 4; i++){
+        console.log(`card${i}`);
+        document.getElementById(`card${i}`).addEventListener( 'click', function() {
+            document.getElementById(`card${i}`).classList.toggle('is-flipped');
+        });
+    }
 });
 
 

@@ -94,5 +94,101 @@ const quest2 = () => {
 }
 
 const quest3 = (event) => {
+    currQuest = 3;
     console.log("3333");
+    document.getElementById("quest2").style.visibility = "visible";
+    document.getElementById("quest1").style.visibility = "hidden";
+    document.getElementById("checkAns1").removeEventListener("click", check);
+    document.getElementById("checkAns1").classList.add("disabled");
+    for (let i = 1; i < 4; i++){
+        console.log(`card${i}`);
+        document.getElementById(`card${i}`).addEventListener( 'click', function() {
+            document.getElementById(`card${i}`).classList.toggle('is-flipped');
+            document.getElementById(`card${i}`).addEventListener("click", pressed);
+        });
+    }
+}
+
+const pressed = (event) => {
+    let counter = 0;
+    event.currentTarget.classList.add("cardTouch");
+    for(let i = 1; i < 4; i++){
+        if (document.getElementById(`card${i}`).classList.contains("cardTouch")) {
+            counter++;
+        }
+    }
+    if (counter == 3){
+        document.getElementById("checkAns1").addEventListener("click", quest4);
+        document.getElementById("checkAns1").classList.remove("disabled");
+    }
+}
+
+const quest4 = (event) => {
+    document.getElementById("quest2").style.visibility = "hidden";
+    document.getElementById("quest3").style.visibility = "visible";
+    document.getElementById("checkAns1").style.color = "#2d8e89";
+    document.getElementById("checkAns1").innerText = "בדוק";
+    for (let i =1; i < 7; i++){
+        document.getElementById(`t4word${i}`).addEventListener("click", changeT4);
+    }
+    document.getElementById("checkAns1").addEventListener("click", check4);
+}
+
+const changeT4 = (event) => {
+    document.getElementById("ansT4").innerText = event.currentTarget.innerText;
+}
+
+const changeT42 = (event) => {
+    document.getElementById("ansT42").innerText = event.currentTarget.innerText;
+}
+
+const check4 = (event) => {
+    for (let i =1; i < 7; i++){
+        document.getElementById(`t4word${i}`).removeEventListener("click", changeT4);
+    }
+    if (document.getElementById("ansT4").innerText != null){
+        if (document.getElementById("ansT4").innerText == "תורן" ){
+            document.getElementById("ansT4").style.color = "green";
+        } else {
+            document.getElementById("ansT4").style.color = "red";
+            document.getElementById("t4word2").style.color = "green";
+        }
+    } else {
+        document.getElementById("ansT4").innerText = "תורן";
+        document.getElementById("ansT4").style.color = "green";
+    }
+
+    document.getElementById("checkAns1").innerText = "הבא";
+    document.getElementById(`checkAns1`).addEventListener("click", change2T4);
+
+}
+
+const change2T4 = (event) => {
+    document.getElementById("quest3").style.visibility = "hidden";
+    document.getElementById("quest4").style.visibility = "visible";
+    document.getElementById("checkAns1").innerText = "בדוק";
+    for (let i =1; i < 7; i++){
+        document.getElementById(`t42word${i}`).addEventListener("click", changeT42);
+    }
+    document.getElementById("checkAns1").addEventListener("click", check42);
+}
+
+const check42 = (event) => {
+    document.getElementById("checkAns1").innerText = "הבא";
+    for (let i =1; i < 7; i++){
+        document.getElementById(`t42word${i}`).removeEventListener("click", changeT4);
+    }
+    if (document.getElementById("ansT42").innerText != null){
+        if (document.getElementById("ansT42").innerText == "שעון" ){
+            document.getElementById("ansT42").style.color = "green";
+        } else {
+            document.getElementById("ansT42").style.color = "red";
+            document.getElementById("t42word2").style.color = "green";
+        }
+    } else {
+        document.getElementById("ansT42").innerText = "שעון";
+        document.getElementById("ansT42").style.color = "green";
+    }
+
+    document.getElementById("checkAns1").innerText = "הבא";
 }
