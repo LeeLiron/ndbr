@@ -1,7 +1,6 @@
 let score = sessionStorage.getItem("score");
 
 window.addEventListener("load", (event) => {
-    alert(score);
     document.getElementById("scoree").innerText = `${String(sessionStorage.getItem("score"))}%` ;
     if (sessionStorage.getItem("score") < 26){
         document.getElementById("mashov").innerText = "דרוש שיפור :("
