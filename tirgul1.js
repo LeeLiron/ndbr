@@ -82,7 +82,7 @@ const quest2 = () => {
     document.getElementById("checkAns1").innerText = "בדוק";
     document.getElementById("checkAns1").removeEventListener("click", quest2);
     document.getElementById("checkAns1").addEventListener("click", check);
-    document.getElementById("tirgul1Word").innerText = `קץ חי"ר`;
+    document.getElementById("tirgul1Word").innerText = `ק. חי"ר`;
     document.getElementById("ans1Title1").innerText = "מנעול";
     document.getElementById("ans1Title2").innerText = "תלתן";
     document.getElementById("ans1Title3").innerText = "צמיד";
